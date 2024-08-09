@@ -14,5 +14,6 @@
   },
   "extra": {
     "class": "Solutioneg\\AutoloadDevPlugin\\AutoloadDevPlugin"
-  }
+  },
+  "minimum-stability": "stable"
 }
