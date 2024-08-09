@@ -1,6 +1,7 @@
 {
   "name": "solutioneg/autoload-dev",
   "type": "composer-plugin",
+  "version": "1.0.0",
   "require": {
     "composer-plugin-api": "^2.0"
   },

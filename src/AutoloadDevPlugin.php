@@ -14,7 +14,7 @@ class AutoloadDevPlugin implements PluginInterface, EventSubscriberInterface
     private $composer;
     private $io;
 
-    const DIR = 'modules-dir';
+    const DIR = 'modules-path';
 
     public function activate(Composer $composer, IOInterface $io)
     {
@@ -38,13 +38,13 @@ class AutoloadDevPlugin implements PluginInterface, EventSubscriberInterface
         $rootPackage = $this->composer->getPackage();
         $extra = $rootPackage->getExtra();
         if (!isset($extra[self::DIR])) {
-            $this->io->writeError('No "dev-dependencies-dir" defined in root composer.json');
+            $this->io->writeError('No "' . self::DIR . '" defined in root composer.json');
             return;
         }
 
         $devDependenciesDir = $extra[self::DIR];
         if (!is_dir($devDependenciesDir)) {
-            $this->io->writeError('The specified "dev-dependencies-dir" does not exist.');
+            $this->io->writeError('The specified "' . self::DIR . '" does not exist.');
             return;
         }
 
