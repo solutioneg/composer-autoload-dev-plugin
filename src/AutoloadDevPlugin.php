@@ -1,6 +1,6 @@
 <?php
 
-namespace YourNamespace\AutoloadDevPlugin;
+namespace Solutioneg\AutoloadDevPlugin;
 
 use Composer\Composer;
 use Composer\EventDispatcher\EventSubscriberInterface;
