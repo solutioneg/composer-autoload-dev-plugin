@@ -1,0 +1,15 @@
+{
+  "name": "solution/autoload-dev",
+  "type": "composer-plugin",
+  "require": {
+    "composer-plugin-api": "^2.0"
+  },
+  "require-dev": {
+    "composer/composer": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Solution\\AutoloadDev\\": "src/"
+    }
+  }
+}
